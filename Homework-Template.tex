@@ -11,10 +11,12 @@
 %-- Homework Information --%
 
 \def\authorName{Michael Hanif Khan}
-\def\assignmentName{Dummy Text Lorem Ipsum Lalala}
+\def\assignmentName{Class Name: Assigment Name}
 \def\dueDate{03/21/24}
 
-%-- Homework Information --%
+\newcounter{problemCounter}
+\setcounter{problemCounter}{0}
+
 
 \begin{document}
 
@@ -25,8 +27,14 @@
 \fancyhead{} % clears header fields
 \fancyfoot{} % clears footer fields
 
+% Header
+\fancyhead[C]{\textbf{\assignmentName}}
+\fancyhead[R]{\text{Page }\thepage}
+% Footer
+\fancyfoot[L]{\textbf{\authorName}}
+
 %-- Page Formatting --%
 
-:)
+:) :D
 
 \end{document}
