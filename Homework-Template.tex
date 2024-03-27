@@ -11,8 +11,9 @@
 %-- Homework Information --%
 
 \def\authorName{Michael Hanif Khan}
-\def\assignmentName{Class Name: Assigment Name}
-\def\dueDate{03/21/24}
+\def\className{Class Name}
+\def\assignmentName{Assigment Name}
+\def\dueDate{01/01/1970}
 
 \newcounter{problemCounter}
 \setcounter{problemCounter}{0}
@@ -29,6 +30,7 @@
 \newenvironment{problemPart}
     {
     \subsection*{Part \Alph{partCounter}}
+    \stepcounter{partCounter}
     }
 
 \begin{document}
@@ -41,19 +43,26 @@
 \fancyfoot{} % clears footer fields
 
 % Header
-\fancyhead[C]{\textbf{\assignmentName}}
+\fancyhead[C]{\textbf{\className} \textbf{ : } \textbf{\assignmentName}}
 \fancyhead[R]{\text{Page }\thepage}
-% Footer
-\fancyfoot[L]{\textbf{\authorName}}
+\fancyhead[L]{\dueDate}
 
 %-- Page Formatting --%
+
+% Start of Content On Page
+
+\begin{center}
+    \large{\textbf{Author: }\authorName}
+\end{center}
 
 \begin{problem}
    Test :)
    \begin{problemPart}
         Test :D
    \end{problemPart}
+   \begin{problemPart}
+        Test II :)
+   \end{problemPart}
 \end{problem}
-
 
 \end{document}
