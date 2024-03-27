@@ -16,13 +16,20 @@
 
 \newcounter{problemCounter}
 \setcounter{problemCounter}{0}
+\newcounter{partCounter}
+
 
 \newenvironment{problem}
     {
     \stepcounter{problemCounter}
+    \setcounter{partCounter}{1}
     \section*{Problem \arabic{problemCounter}}
     }
 
+\newenvironment{problemPart}
+    {
+    \subsection*{Part \Alph{partCounter}}
+    }
 
 \begin{document}
 
@@ -43,6 +50,9 @@
 
 \begin{problem}
    Test :)
+   \begin{problemPart}
+        Test :D
+   \end{problemPart}
 \end{problem}
 
 
