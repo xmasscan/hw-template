@@ -17,6 +17,12 @@
 \newcounter{problemCounter}
 \setcounter{problemCounter}{0}
 
+\newenvironment{problem}
+    {
+    \stepcounter{problemCounter}
+    \section*{Problem \arabic{problemCounter}}
+    }
+
 
 \begin{document}
 
@@ -35,6 +41,9 @@
 
 %-- Page Formatting --%
 
-:) :D
+\begin{problem}
+   Test :)
+\end{problem}
+
 
 \end{document}
